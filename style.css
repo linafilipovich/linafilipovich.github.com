@@ -5,7 +5,7 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'IBM Plex Mono', serif;
-    font-size: 18px;
+    font-size: 10px;
 }
 
 header {
@@ -14,7 +14,7 @@ header {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 1em;
     margin: 0 0 1em;
 }
 
