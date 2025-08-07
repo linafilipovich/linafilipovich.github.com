@@ -90,4 +90,6 @@ footer a {
 
 footer a:hover {
   color: #fff;
+}body {
+  background-color: red;
 }
