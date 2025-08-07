@@ -32,6 +32,10 @@ nav a {
   color: #800080; /* фиолетовый */
   text-decoration: underline;
 }
+a:active,
+a:focus {
+  color: red; /* красный при нажатии */
+}
 
 /* Специально для email-ссылок */
 a[href^="mailto:"] {
