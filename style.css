@@ -8,11 +8,29 @@
 body {
   margin: 0;
   padding: 40px;
-  background: #000;
-  color: #fff;
   font-family: 'IBM Plex Mono', monospace;
   transition: none !important;
   overflow-x: hidden;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Фон с фотографией */
+.background-photo {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: 
+    linear-gradient(rgba(255,0,0,0.85), rgba(255,0,0,0.85)), /* красный цвет с прозрачностью */
+    url('YOUR_PHOTO_URL_HERE.jpg') center center / cover no-repeat;
+  z-index: 0;
+  pointer-events: none; /* чтобы клики проходили */
+}
+
+/* Контент поверх */
+header, main, nav, .corner-cross, #glow-dot {
+  position: relative;
+  z-index: 1;
 }
 
 /* Заголовок */
@@ -101,7 +119,7 @@ main p {
 
 /* Класс для красного фона и белого текста */
 body.invert-colors {
-  background-color: #ff0000 !important; /* красный фон */
+  background-color: transparent !important; /* убираем фон body, фон будет у .background-photo */
   color: #fff !important; /* белый текст */
 }
 
@@ -117,20 +135,18 @@ body.invert-colors .corner-cross {
   color: #800080 !important;
 }
 
-/* Яркое рассеянное белое свечение под мышью без видимой точки */
+/* Яркое рассеянное белое свечение под мышью */
 #glow-dot {
   position: fixed;
   pointer-events: none;
-  width: 0;
-  height: 0;
-  border-radius: 25%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   background: transparent;
   box-shadow:
-    0 0 10px 10px rgba(255, 255, 255, 0.7),
-    0 0 25px 20px rgba(255, 255, 255, 0.5),
-    0 0 40px 35px rgba(255, 255, 255, 0.3),
-    0 0 60px 55px rgba(255, 255, 255, 0.15),
-    0 0 80px 75px rgba(255, 255, 255, 0.07);
+    0 0 10px 15px rgba(255, 255, 255, 0.4),
+    0 0 20px 30px rgba(255, 255, 255, 0.25),
+    0 0 30px 50px rgba(255, 255, 255, 0.15);
   opacity: 0;
   transition: opacity 0.3s ease;
   transform: translate(-50%, -50%);
