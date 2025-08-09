@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Bitcount Grid Double';
+  src: url('fonts/BitcountGridDouble-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 40px;
@@ -6,51 +13,6 @@ body {
   font-family: 'IBM Plex Mono', monospace;
   transition: none !important;
   overflow-x: hidden;
-}
-
-/* Красный фон с фотографией при hover (invert-colors) */
-body.invert-colors {
-  background-color: #ff0000 !important;
-  background-image: url('images/photo.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fff !important;
-}
-
-/* Оставляем меню с черным фоном и белым текстом */
-nav {
-  background-color: #000;
-  padding: 10px 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: underline;
-  transition: none !important;
-}
-
-/* При hover красного фона ссылки остаются белыми */
-body.invert-colors nav a {
-  color: #fff !important;
-}
-
-/* Крестик фиолетовый всегда */
-.corner-cross {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 80px;
-  color: #800080;
-  text-decoration: none;
-  transition: none !important;
-  background-color: transparent;
-  z-index: 10;
-}
-
-.corner-cross:active {
-  color: red;
 }
 
 /* Заголовок */
@@ -81,6 +43,34 @@ body.invert-colors header h1 {
   25%, 75% { opacity: 0; }
 }
 
+/* Меню */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 45px;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #800080; /* фиолетовый */
+  text-decoration: underline;
+  transition: none !important;
+  background-color: transparent;
+}
+
+nav a:hover,
+nav a:visited {
+  color: #800080;
+}
+
+nav a:active {
+  color: red;
+}
+
 /* Текст описания */
 main p {
   font-size: 13px;
@@ -91,5 +81,58 @@ main p {
   background-color: transparent;
 }
 
-/* Светящаяся точка курсора (оставляем как есть) */
-/* ... (твой код свечения) ... */
+/* Крестик в углу */
+.corner-cross {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 80px;
+  color: #800080;
+  text-decoration: none;
+  transition: none !important;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.corner-cross:active {
+  color: red;
+}
+
+/* Класс для красного фона и белого текста */
+body.invert-colors {
+  background-color: #ff0000 !important; /* красный фон */
+  color: #fff !important; /* белый текст */
+}
+
+/* Все элементы внутри body.invert-colors */
+body.invert-colors * {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+/* Ссылки и крестик остаются фиолетовыми */
+body.invert-colors nav a,
+body.invert-colors .corner-cross {
+  color: #800080 !important;
+}
+
+/* Яркое рассеянное белое свечение под мышью без видимой точки */
+#glow-dot {
+  position: fixed;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border-radius: 25%;
+  background: transparent;
+  box-shadow:
+    0 0 10px 10px rgba(255, 255, 255, 0.7),
+    0 0 25px 20px rgba(255, 255, 255, 0.5),
+    0 0 40px 35px rgba(255, 255, 255, 0.3),
+    0 0 60px 55px rgba(255, 255, 255, 0.15),
+    0 0 80px 75px rgba(255, 255, 255, 0.07);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
