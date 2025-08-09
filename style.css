@@ -79,7 +79,7 @@ main p {
   text-decoration: none;
 }
 
-.corner-cross:hover {
+.corner-cross:active {
   color: red; 
 }
 }
