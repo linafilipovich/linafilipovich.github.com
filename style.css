@@ -91,7 +91,7 @@ body.invert-colors {
 
 /* Все элементы внутри body.invert-colors, кроме ссылок и крестика */
 body.invert-colors *:not(nav a):not(.corner-cross) {
-  background-color: white !important;
+  background-color: #ff0000 !important; /* красный фон */
   color: black !important;
 }
 
