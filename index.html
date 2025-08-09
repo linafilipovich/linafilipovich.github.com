@@ -34,6 +34,15 @@
         </section>
     </main>
 <a href="photo.html" class="corner-cross">☦</a>
+    <script>
+  const headerTitle = document.querySelector('header h1');
+  headerTitle.addEventListener('mouseenter', () => {
+    document.body.classList.add('invert-colors');
+  });
+  headerTitle.addEventListener('mouseleave', () => {
+    document.body.classList.remove('invert-colors');
+  });
+</script>
 </body>
 </html>
 
