@@ -74,7 +74,7 @@ main p {
   bottom: 40px;  /* отступ от низа */
   right: 40px;   /* отступ от правого края */
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 90px;
+  font-size: 200px;
   color: #800080;
   text-decoration: none;
 }
