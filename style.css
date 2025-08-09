@@ -117,7 +117,7 @@ body.invert-colors .corner-cross {
   color: #800080 !important;
 }
 
-/* Яркое рассеянное белое свечение под мышью без видимой точки */
+/* Яркое рассеянное белое свечение под мышью без видимой точки, уменьшенное в 3 раза */
 #glow-dot {
   position: fixed;
   pointer-events: none;
