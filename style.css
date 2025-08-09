@@ -69,6 +69,5 @@ main p {
   font-family: monospace;
 }
 
-.corner-cross:hover {
-  color: #800080; /* фиолетовый при наведении */
+<a href="photo.html" class="corner-cross">+</a>
 }
