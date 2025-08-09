@@ -33,8 +33,7 @@ header h1 {
 nav ul {
   list-style: none;
   padding: 0;
-}nav ul 
-  margin-bottom: 40px; /* увеличь значение, если нужно больше */
+  margin-bottom: 40px;
 }
 
 nav li {
