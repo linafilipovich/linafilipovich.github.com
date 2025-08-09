@@ -26,7 +26,7 @@ header h1 {
   background-color: transparent;
 }
 
-/* Подсветка заголовка при красном фоне */
+/* Подсветка заголовка при инвертированных цветах */
 body.invert-colors header h1 {
   color: #fff !important;
   background-color: transparent !important;
@@ -99,10 +99,10 @@ main p {
   color: red;
 }
 
-/* Класс для инвертированных цветов (без красного фона!) */
+/* Класс для инвертированных цветов (текст белый, фон чёрный) */
 body.invert-colors {
-  color: #fff !important; /* белый текст */
-  background-color: #000 !important; /* черный фон, чтобы фото видно было */
+  color: #fff !important;
+  background-color: #000 !important;
 }
 
 /* Все элементы внутри body.invert-colors */
@@ -117,13 +117,15 @@ body.invert-colors .corner-cross {
   color: #800080 !important;
 }
 
-/* Фоновое фото, скрыто по умолчанию */
+/* Фоновое фото (красный фон + фото), скрыто по умолчанию */
 #red-bg-photo {
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('/img/photo.jpg') center center / cover no-repeat;
+  background: 
+    linear-gradient(rgba(255, 0, 0, 0.75), rgba(255, 0, 0, 0.75)),
+    url('/photo.jpg') center center / cover no-repeat;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
