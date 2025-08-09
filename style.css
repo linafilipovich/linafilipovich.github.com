@@ -117,17 +117,18 @@ body.invert-colors .corner-cross {
   color: #800080 !important;
 }
 
-/* Светящаяся точка под мышью - меньше и с мягким свечением */
+/* Яркое рассеянное белое свечение под мышью без видимой точки */
 #glow-dot {
   position: fixed;
   pointer-events: none;
-  width: 12px;
-  height: 12px;
+  width: 0;
+  height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: transparent;
   box-shadow:
-    0 0 12px 10px rgba(255, 255, 255, 0.15),
-    0 0 30px 20px rgba(255, 255, 255, 0.1);
+    0 0 20px 30px rgba(255, 255, 255, 0.3),
+    0 0 40px 60px rgba(255, 255, 255, 0.15),
+    0 0 60px 90px rgba(255, 255, 255, 0.1);
   opacity: 0;
   transition: opacity 0.3s ease;
   transform: translate(-50%, -50%);
