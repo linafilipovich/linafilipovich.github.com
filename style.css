@@ -19,7 +19,7 @@ header h1 {
   font-family: 'Bitcount Grid Double', monospace;
   font-size: 86px;
   margin-bottom: 20px;
-  animation: blink 4s infinite; /* мигает */
+  animation: blink 4s infinite;
   transition: none !important;
   cursor: pointer;
 }
@@ -54,7 +54,7 @@ nav a:visited {
 }
 
 nav a:active {
-  color: red; /* при нажатии красный */
+  color: red;
 }
 
 /* Текст описания */
@@ -78,21 +78,20 @@ main p {
   transition: none !important;
 }
 
-/* При нажатии крестик красный */
 .corner-cross:active {
   color: red;
 }
 
-/* Класс для инвертирования цветов */
+/* Класс для инвертирования цветов при наведении */
 body.invert-colors {
-  background-color: white !important;
-  color: black !important;
+  background-color: #ff0000 !important; /* красный фон */
+  color: #fff !important; /* белый текст */
 }
 
 /* Все элементы внутри body.invert-colors, кроме ссылок и крестика */
 body.invert-colors *:not(nav a):not(.corner-cross) {
-  background-color: #ff0000 !important; /* красный фон */
-  color: black !important;
+  background-color: #ff0000 !important;
+  color: #fff !important;
 }
 
 /* Ссылки и крестик остаются фиолетовыми */
