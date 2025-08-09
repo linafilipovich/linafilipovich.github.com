@@ -69,5 +69,17 @@ main p {
   font-family: monospace;
 }
 
-<a href="photo.html" class="corner-cross">+</a>
+.corner-cross {
+  position: fixed;
+  bottom: 25px;  /* отступ от низа */
+  right: 25px;   /* отступ от правого края */
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.corner-cross:hover {
+  color: #800080; /* фиолетовый при наведении */
+}
 }
