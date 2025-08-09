@@ -18,6 +18,13 @@ header h1 {
   font-size: 86px;
   margin-bottom: 20px;
   animation: blink 4s infinite; /* тут анимация сразу на заголовок */
+  transition: background-color 0.3s, color 0.3s; /* плавный переход */
+}
+
+header h1:hover {
+  background-color: white; /* фон белый */
+  color: black;            /* текст чёрный */
+  padding: 5px;            /* небольшой отступ, чтобы фон был виден */
 }
 
 @keyframes blink {
