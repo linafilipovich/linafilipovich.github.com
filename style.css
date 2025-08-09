@@ -21,7 +21,7 @@ header h1 {
   margin-bottom: 20px;
   animation: blink 4s infinite; /* мигает */
   transition: none !important;
-  cursor: pointer; /* чтобы было понятно, что интерактивно */
+  cursor: pointer;
 }
 
 /* Анимация мигания */
@@ -59,9 +59,9 @@ nav a:active {
 
 /* Текст описания */
 main p {
-  font-size: 13px;      /* мелкий текст */
+  font-size: 13px;
   line-height: 1.3;
-  max-width: 700px;     /* ограничение ширины для удобства чтения */
+  max-width: 700px;
   margin-bottom: 12px;
   transition: none !important;
 }
@@ -83,8 +83,14 @@ main p {
   color: red;
 }
 
-/* Класс для инвертирования цветов всего сайта при наведении на заголовок */
+/* Класс для инвертирования цветов */
 body.invert-colors {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Все элементы внутри body.invert-colors, кроме ссылок и крестика */
+body.invert-colors *:not(nav a):not(.corner-cross) {
   background-color: white !important;
   color: black !important;
 }
