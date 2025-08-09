@@ -24,6 +24,16 @@ header h1 {
   cursor: pointer;
 }
 
+/* Подсветка заголовка при красном фоне */
+body.invert-colors header h1 {
+  color: #fff !important;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff;
+}
+
 /* Анимация мигания */
 @keyframes blink {
   0%, 50%, 100% { opacity: 1; }
