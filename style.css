@@ -75,11 +75,11 @@ main p {
   right: 40px;   /* отступ от правого края */
   font-family: 'IBM Plex Mono', monospace;
   font-size: 36px;
-  color: #fff;
+  color: #800080;
   text-decoration: none;
 }
 
 .corner-cross:hover {
-  color: #800080; /* фиолетовый при наведении */
+  color: #fff; /* white при наведении */
 }
 }
