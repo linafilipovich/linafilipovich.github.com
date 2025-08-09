@@ -126,9 +126,9 @@ body.invert-colors .corner-cross {
   border-radius: 50%;
   background: transparent;
   box-shadow:
-    0 0 40px 40px rgba(255, 255, 255, 0.7),
-    0 0 80px 70px rgba(255, 255, 255, 0.4),
-    0 0 120px 100px rgba(255, 255, 255, 0.25);
+    0 0 13px 13px rgba(255, 255, 255, 0.7),
+    0 0 27px 23px rgba(255, 255, 255, 0.4),
+    0 0 40px 33px rgba(255, 255, 255, 0.25);
   opacity: 0;
   transition: opacity 0.3s ease;
   transform: translate(-50%, -50%);
