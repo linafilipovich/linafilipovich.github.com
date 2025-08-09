@@ -99,10 +99,10 @@ main p {
   color: red;
 }
 
-/* Класс для красного фона и белого текста */
+/* Класс для инвертированных цветов (без красного фона!) */
 body.invert-colors {
-  background-color: #ff0000 !important; /* красный фон */
   color: #fff !important; /* белый текст */
+  background-color: #000 !important; /* черный фон, чтобы фото видно было */
 }
 
 /* Все элементы внутри body.invert-colors */
@@ -115,6 +115,19 @@ body.invert-colors * {
 body.invert-colors nav a,
 body.invert-colors .corner-cross {
   color: #800080 !important;
+}
+
+/* Фоновое фото, скрыто по умолчанию */
+#red-bg-photo {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('img/photo.jpg') center center / cover no-repeat;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: -1;
 }
 
 /* Яркое рассеянное белое свечение под мышью без видимой точки */
