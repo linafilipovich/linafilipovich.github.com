@@ -121,14 +121,14 @@ body.invert-colors .corner-cross {
 #glow-dot {
   position: fixed;
   pointer-events: none;
-  width: 30px;
-  height: 30px;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   background: transparent;
   box-shadow:
-    0 0 40px 40px rgba(255, 255, 255, 0.5),
-    0 0 80px 70px rgba(255, 255, 255, 0.3),
-    0 0 120px 100px rgba(255, 255, 255, 0.15);
+    0 0 40px 40px rgba(255, 255, 255, 0.7),
+    0 0 80px 70px rgba(255, 255, 255, 0.4),
+    0 0 120px 100px rgba(255, 255, 255, 0.25);
   opacity: 0;
   transition: opacity 0.3s ease;
   transform: translate(-50%, -50%);
