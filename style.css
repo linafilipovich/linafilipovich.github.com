@@ -71,10 +71,10 @@ main p {
 
 .corner-cross {
   position: fixed;
-  bottom: 25px;  /* отступ от низа */
-  right: 25px;   /* отступ от правого края */
+  bottom: 40px;  /* отступ от низа */
+  right: 40px;   /* отступ от правого края */
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 20px;
+  font-size: 36px;
   color: #fff;
   text-decoration: none;
 }
