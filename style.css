@@ -22,7 +22,7 @@ body {
   top: 0; left: 0; right: 0; bottom: 0;
   background: 
     linear-gradient(rgba(255,0,0,0.85), rgba(255,0,0,0.85)), /* красный цвет с прозрачностью */
-    url('YOUR_PHOTO_URL_HERE.jpg') center center / cover no-repeat;
+    url('https://drive.google.com/file/d/1rrY67PBQnPRanrET0-1Cr0QvAczlOImT/view?usp=sharing.jpg') center center / cover no-repeat;
   z-index: 0;
   pointer-events: none; /* чтобы клики проходили */
 }
