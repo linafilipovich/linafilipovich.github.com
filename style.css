@@ -59,3 +59,16 @@ main p {
   max-width: 700px;     /* ограничение ширины, чтобы легче читать */
   margin-bottom: 12px;  /* немного пространства между абзацами */
 }
+.corner-cross {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-family: monospace;
+}
+
+.corner-cross:hover {
+  color: #800080; /* фиолетовый при наведении */
+}
