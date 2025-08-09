@@ -22,15 +22,17 @@ header h1 {
   animation: blink 4s infinite;
   transition: none !important;
   cursor: pointer;
+  background-color: transparent; /* убираем заливку по умолчанию */
 }
 
 /* Подсветка заголовка при красном фоне */
 body.invert-colors header h1 {
   color: #fff !important;
+  background-color: transparent !important; /* чтобы не было заливки */
   text-shadow:
-    0 0 5px #fff,
     0 0 10px #fff,
     0 0 20px #fff,
+    0 0 30px #fff,
     0 0 40px #fff;
 }
 
@@ -56,6 +58,7 @@ nav a {
   color: #800080; /* фиолетовый */
   text-decoration: underline;
   transition: none !important;
+  background-color: transparent; /* убираем заливку */
 }
 
 nav a:hover,
@@ -74,6 +77,7 @@ main p {
   max-width: 700px;
   margin-bottom: 12px;
   transition: none !important;
+  background-color: transparent; /* убираем заливку */
 }
 
 /* Крестик в углу */
@@ -86,21 +90,22 @@ main p {
   color: #800080;
   text-decoration: none;
   transition: none !important;
+  background-color: transparent; /* убираем заливку */
 }
 
 .corner-cross:active {
   color: red;
 }
 
-/* Класс для инвертирования цветов при наведении */
+/* Класс для красного фона и белого текста */
 body.invert-colors {
-  background-color: #ff0000 !important; /* красный фон */
+  background-color: #ff0000 !important; /* красный фон на body */
   color: #fff !important; /* белый текст */
 }
 
 /* Все элементы внутри body.invert-colors, кроме ссылок и крестика */
-body.invert-colors *:not(nav a):not(.corner-cross) {
-  background-color: #ff0000 !important;
+body.invert-colors * {
+  background-color: transparent !important; /* убираем заливки элементов */
   color: #fff !important;
 }
 
