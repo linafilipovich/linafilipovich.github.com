@@ -17,7 +17,7 @@ header h1 {
   font-family: 'Bitcount Grid Double', monospace;
   font-size: 86px;
   margin-bottom: 20px;
-  animation: blink 2s infinite; /* тут анимация сразу на заголовок */
+  animation: blink 4s infinite; /* тут анимация сразу на заголовок */
 }
 
 @keyframes blink {
