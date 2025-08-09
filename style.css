@@ -11,8 +11,7 @@ body {
   background: #000;
   color: #fff;
   font-family: 'IBM Plex Mono', monospace;
-  transition: none !important;
-  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Заголовок */
@@ -21,29 +20,40 @@ header h1 {
   font-size: 86px;
   margin-bottom: 20px;
   animation: blink 4s infinite;
-  transition: none !important;
+  transition: background-color 0.3s, color 0.3s, text-shadow 0.3s;
   cursor: pointer;
-  background-color: transparent;
 }
 
-/* Подсветка заголовка при красном фоне */
-body.invert-colors header h1 {
-  color: #fff !important;
-  background-color: transparent !important;
+/* Hover-эффект на заголовок */
+header h1:hover {
+  background-color: red;
+  color: white;
+  padding: 5px;
   text-shadow:
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 30px #fff,
-    0 0 40px #fff;
+    0 0 10px white,
+    0 0 20px white,
+    0 0 30px white;
 }
 
-/* Анимация мигания */
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; }
-  25%, 75% { opacity: 0; }
+/* При наведении на заголовок — фон и текст */
+body.invert-colors {
+  background-color: red;
+  color: white;
+  transition: none !important;
 }
 
-/* Меню */
+/* Текст заголовка со свечением при красном фоне */
+body.invert-colors header h1 {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  text-shadow:
+    0 0 10px white,
+    0 0 20px white,
+    0 0 30px white;
+}
+
+/* Навигация */
 nav ul {
   list-style: none;
   padding: 0;
@@ -58,27 +68,12 @@ nav li {
 nav a {
   color: #800080; /* фиолетовый */
   text-decoration: underline;
-  transition: none !important;
-  background-color: transparent;
+  transition: color 0.3s;
 }
 
-nav a:hover,
-nav a:visited {
+/* Фиолетовые ссылки при красном фоне остаются фиолетовыми */
+body.invert-colors nav a {
   color: #800080;
-}
-
-nav a:active {
-  color: red;
-}
-
-/* Текст описания */
-main p {
-  font-size: 13px;
-  line-height: 1.3;
-  max-width: 700px;
-  margin-bottom: 12px;
-  transition: none !important;
-  background-color: transparent;
 }
 
 /* Крестик в углу */
@@ -90,47 +85,21 @@ main p {
   font-size: 80px;
   color: #800080;
   text-decoration: none;
-  transition: none !important;
-  background-color: transparent;
+  transition: color 0.3s;
   z-index: 10;
 }
 
+/* При наведении на заголовок крестик остаётся фиолетовым */
+body.invert-colors .corner-cross {
+  color: #800080;
+}
+
+/* При нажатии крестик краснеет */
 .corner-cross:active {
   color: red;
 }
 
-/* Класс для красного фона и белого текста */
-body.invert-colors {
-  background-color: #ff0000 !important; /* красный фон */
-  color: #fff !important; /* белый текст */
-}
-
-/* Все элементы внутри body.invert-colors */
-body.invert-colors * {
-  background-color: transparent !important;
-  color: #fff !important;
-}
-
-/* Ссылки и крестик остаются фиолетовыми */
-body.invert-colors nav a,
-body.invert-colors .corner-cross {
-  color: #800080 !important;
-}
-
-/* Яркое круглое и плавно рассеивающееся белое свечение под мышью */
-#glow-dot {
-  position: fixed;
-  pointer-events: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  box-shadow:
-    0 0 15px 15px rgba(255, 255, 255, 0.7),
-    0 0 30px 30px rgba(255, 255, 255, 0.4),
-    0 0 60px 60px rgba(255, 255, 255, 0.15);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-}
+/* Описание */
+main p {
+  font-size: 13px;
+  line-height: 1.
