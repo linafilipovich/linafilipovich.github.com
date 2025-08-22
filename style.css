@@ -119,7 +119,7 @@ body.invert-colors .corner-cross {
   height: 100vh;
   background:
     linear-gradient(rgba(255, 0, 0, 0.75), rgba(255, 0, 0, 0.75)),
-    url('/photo.jpg') center center / cover no-repeat;
+    url('/image2.jpg') center center / cover no-repeat;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.5s ease;
