@@ -20,7 +20,6 @@ header h1 {
   font-family: 'Bitcount Grid Double', monospace;
   font-size: 86px;
   margin-bottom: 20px;
-  animation: blink 4s infinite;
   cursor: pointer;
   background-color: transparent;
 }
