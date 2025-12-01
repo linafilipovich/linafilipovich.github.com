@@ -102,7 +102,7 @@ body.invert-colors * {
 
 body.invert-colors nav a,
 body.invert-colors .corner-cross {
-  color: #800080 !important;
+  color: #fff !important;
 }
 
 /* Фоновое фото с красным фильтром */
